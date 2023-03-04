@@ -1,7 +1,13 @@
+import Inicio from "./pages/Inicio";
+import SobreMim from "./pages/SobreMim";
+
+console.log(window.location)
+
+const pagina = window.location.pathname === '/' ? <Inicio /> : <SobreMim />
 
 function App() {
   return (
-    <h1>Curriculo 2.0</h1>
+    pagina
   );
 }
 
