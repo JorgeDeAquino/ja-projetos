@@ -1,11 +1,15 @@
-import { BrowserRouter } from "react-router-dom";
-import Inicio from "./pages/Inicio";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Inicio from './pages/Inicio'
 import SobreMim from "./pages/SobreMim";
 
 function App() {
   return (
     <BrowserRouter>
-    
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="sobremim" element={<SobreMim />} />
+        <Route path="*" element={<div>Pagina nao encontrada</div>} />
+      </Routes>
     </BrowserRouter>
   );
 }
