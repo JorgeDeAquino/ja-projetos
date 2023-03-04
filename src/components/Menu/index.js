@@ -1,11 +1,20 @@
+import { Link, useLocation } from 'react-router-dom'
 import Styles from './Menu.module.css'
 
 export default function Menu() {
+    const localizacao = useLocation();
+
+    console.log(localizacao);
+
   return (
     <header>
         <nav className={Styles.navegacao}>
-            <a className={Styles.link} href="/" > Inicio </a>
-            <a className={Styles.link} href="/sobremim" > Sobre Mim</a>
+            <Link className={Styles.link} to="/" >
+                Inicio
+            </Link>
+            <Link className={Styles.link} to="/sobremim" >
+                Sobre Mim
+            </Link>
         </nav>
     </header>
   )
